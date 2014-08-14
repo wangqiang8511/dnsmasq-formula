@@ -1,0 +1,4 @@
+{% for mid, ips in salt['mine.get']('*', 'network.ip_addrs').items() %}
+{{ips[0]}}    {{mid}}
+{% endfor %}
+
