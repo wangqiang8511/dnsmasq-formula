@@ -3,7 +3,7 @@
 {% set g  = salt['grains.get'](name, {}) %}
 {% set defaults = {} %}
 {%- do defaults.update({
-    'upstream_dns_addr': '10.0.0.2',
+    'upstream_dns_addr': '10.0.2.2',
     'dns_addr': '172.0.0.1',
     'domain': 'razerbigdata.com',
     }) 
