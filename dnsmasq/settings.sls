@@ -13,8 +13,8 @@
 {%- set dns_addr   = g.get('dns_addr', p.get('dns_addr', defaults.dns_addr)) %}
 {%- set domain   = g.get('domain', p.get('domain', defaults.domain)) %}
 
-{% set defaults = {} %}
-{%- do defaults.update({
+{% set dnsmasq = {} %}
+{%- do dnsmasq.update({
     'upstream_dns_addr': upstream_dns_addr,
     'dns_addr': dns_addr,
     'domain': domain,
