@@ -28,11 +28,4 @@ dnsmasq:
       - pkg: dnsmasq
 
 /etc/hosts.dnsmasq:
-  file.managed:
-    - source: salt://dnsmasq/files/hosts.dnsmasq
-    - user: root
-    - group: root
-    - mode: 644
-    - template: jinja
-    - require:
-      - pkg: dnsmasq
+  file.touch
