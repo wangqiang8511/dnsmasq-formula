@@ -15,7 +15,7 @@ hosts_dnsmasq_update:
     
 
 refresh hosts:
-  cmd.wait:
+  cmd.run:
     - name: 'pkill -SIGHUP dnsmasq'
     - requires:
       - cmd: hosts_dnsmasq_update
